@@ -32,7 +32,6 @@ public class UserService {
     user.setLastname(userRequest.getLastname());
     user.setPassword(passwordEncoder.encode(userRequest.getPassword()));
     user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
-    System.out.println(roleRepository.findByName("ROLE_USER"));
     return userRepository.save(user) != null;
   }
 
