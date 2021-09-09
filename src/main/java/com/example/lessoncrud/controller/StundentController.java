@@ -41,11 +41,6 @@ public class StundentController {
     return ResponseEntity.ok(studentService.showStudentByUsername(username));
   }
 
-//  @GetMapping("/student/search")
-//  private ResponseEntity getLikeStudent(@RequestParam String name) {
-//    return ResponseEntity.ok(studentService.getLikeStudent(name));
-//  }
-
   @GetMapping("/student/search")
   private ResponseEntity getStudentStartSurname(@RequestParam String lastname) {
     return ResponseEntity.ok(studentService.getLikeStartSurname(lastname));
